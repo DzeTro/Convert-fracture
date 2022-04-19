@@ -15,10 +15,6 @@ namespace BruchUmwandeln
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // Zähler berechnen 
-            // Nenner berechnen
-            // ergebniss ausgeben als Zäler und Nenner getrennt;
-           
             decimal userInput = decimal.Parse(dezimalZahl.Text);
 
 
@@ -26,8 +22,6 @@ namespace BruchUmwandeln
             decimal resultZaehler = (1 * 100);
 
 
-
-            /// 1. Bruch kürzen so weit es geht
             decimal temp = 0;
             decimal ggt = 0;
             decimal tempZaeler = resultZaehler;
@@ -46,7 +40,6 @@ namespace BruchUmwandeln
             zaehler.Text = resultZaehler.ToString("G29");
             nenner.Text = resultNenner.ToString();
 
-            // 2. Ganzteil aus dem Bruch extrahieren und separat anzeigen
             if (resultZaehler <= resultNenner)
             {
                 int  ganzteil = ((int)(resultNenner / resultZaehler));
